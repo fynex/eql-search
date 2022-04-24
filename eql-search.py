@@ -38,7 +38,7 @@ def values_to_row(args):
 
     return row
 
-def search(args):
+def search(eql_cli, args):
     if args.size != None:
         res = eql_cli.search(
             index=args.index,
@@ -66,7 +66,7 @@ if args.check:
 
 eql_cli = elasticsearch.client.EqlClient(es)
 
-search_result = search(args)
+search_result = search(eql_cli, args)
 
 if args.columns != []:
     print(to_csv(args.columns))
