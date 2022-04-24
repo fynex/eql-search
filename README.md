@@ -2,7 +2,7 @@
 
 Searches via EQL (Event Query Language) in an elasticsearch instance to find documents with an advanced syntax.
 
-Elastic Syntax: 
+Elastic Syntax: https://www.elastic.co/guide/en/elasticsearch/reference/current/eql-syntax.html
 Syntax: https://readthedocs.org/projects/eql/downloads/pdf/latest/
 
 Definition of EQL
