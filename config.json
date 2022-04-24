@@ -1,0 +1,5 @@
+{
+ "elastic_url" : "https://YOUR_ELASTICSEARCH_URL:9200",
+ "api_key" : "YOUR_API_KEY",
+ "tls_fingerprint" : "YOUR_ELASTICSEARCH_TLS_FINGERPRINT"
+}
