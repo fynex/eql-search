@@ -20,6 +20,8 @@ pip install elasticsearch
 
 # Usage
 
+## Columns Output
+
 ```bash
 python main.py --size 3 --columns 'process.name, process.command_line, process.parent.name, host.name' --eql '
 process where process.name == "sh"
@@ -31,4 +33,14 @@ process.name,process.command_line,process.parent.name,host.name
 sh,/bin/sh -c iptables -w -I f2b-sshd 1 -s 127.0.0.1 -j REJECT --reject-with icmp-port-unreachable,python3.8,localhost
 sh,/bin/sh -c iptables -w -I f2b-sshd 1 -s 127.0.0.1 -j REJECT --reject-with icmp-port-unreachable,sh,localhost
 sh,/bin/sh -c iptables -w -I f2b-sshd 1 -s 127.0.0.1 -j REJECT --reject-with icmp-port-unreachable,python3.8,localhost
+```
+
+## Json Output
+
+To get the raw json output omit the `--columns` parameter.
+
+```bash
+python main.py --eql '
+process where process.name == "sh"
+'
 ```
